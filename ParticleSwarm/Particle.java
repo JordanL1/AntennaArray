@@ -35,11 +35,12 @@ public class Particle {
      * @return
      */
     public double[] calculateNewVelocity(double[] gbest) {
+        Random rand = new Random();
         double[] newVelocity = new double[velocity.length];
 
         for (int i = 0; i < velocity.length-1; i++) {
-            newVelocity[i] = (INERTIAL_COEFFICIENT * velocity[i]) + COGNITIVE_COEFFICIENT * (pbest[i] - position[i]) 
-                + SOCIAL_COEFFICIENT * (gbest[i] - position[i]); 
+            newVelocity[i] = (INERTIAL_COEFFICIENT * velocity[i]) + COGNITIVE_COEFFICIENT * rand.nextDouble() * (pbest[i] - position[i]) 
+                + SOCIAL_COEFFICIENT * rand.nextDouble() * (gbest[i] - position[i]); 
         }
 
         newVelocity[velocity.length-1] = 0;
