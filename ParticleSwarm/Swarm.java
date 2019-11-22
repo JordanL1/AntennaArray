@@ -4,7 +4,7 @@ public class Swarm {
     private double[] gbest;
     private double gbestCost;
 
-    public Swarm(AntennaArray antArr, int numParticles, int iterations) {
+    public Swarm(AntennaArray antArr, int numParticles) {
         antennaArray = antArr;
         particles = new Particle[numParticles];
 

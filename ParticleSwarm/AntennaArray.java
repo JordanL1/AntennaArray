@@ -9,7 +9,7 @@ public class AntennaArray {
     public static void main(String[] args) {
         AntennaArray antennaArray = new AntennaArray(3, 90);
         
-        Swarm particleSwarm = new Swarm(antennaArray, 20, 100);
+        Swarm particleSwarm = new Swarm(antennaArray, 20);
         double[] solution = particleSwarm.swarmSearch(100);
 
         System.out.println("Solution is valid: " + antennaArray.is_valid(solution));
